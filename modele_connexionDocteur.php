@@ -6,7 +6,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>LifeHealth</title>
-		<link href="img/styleModel_connexion.css" rel="stylesheet" type="text/css">
+		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		
