@@ -17,15 +17,10 @@ if (isset($_GET['module'])) {
             case 'connexion':
                 $moduleC = new ModConnexion();
             break;
-            case 'admin':
-                $moduleA = new ModAdmin();
-               
-            break;
             case 'docteur':
                 $moduleM = new ModDocteur();
                
             break;
-
             case 'patient':
                 $moduleAdm = new ModPatient();
             break;
@@ -38,6 +33,7 @@ if (isset($_GET['module'])) {
     $content = VueGlobale::afficher();
 
     if(!empty($_SESSION['login'])){}else if(empty($module)){
+        //require('header.php');
         require('modele_client.php');
     }
 
