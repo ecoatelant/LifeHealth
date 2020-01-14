@@ -9,10 +9,8 @@
 		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		
-		<a id="logo"href="model_c"><img src="img/logo.png" alt="Logo du site"></a>
-		<img id="Titre"src="img/Titre.png" alt="Logo du site">
-		<div id="connexion">
+		<div id="divTitre" >
+			<img src="img/Titre.png" alt="Logo du site">
 			<a href="index.php?module=connexion" >Connexion/
 			Inscription</a>		
 		</div>
@@ -39,9 +37,9 @@
 		
 		
 		<footer>
-		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
+		<img id="imgfoot1" src="img/logo.png" alt="Logo du site">
 		<p>Life Health, tous droits révervés</p>		
-		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
+		<img id="imgfoot2" src="img/logo.png" alt="Logo du site">
 		</footer>
 		
 	</body>
