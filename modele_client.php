@@ -17,8 +17,8 @@
 		<a id="logo"href="model_c"><img src="img/logo.png" alt="Logo du site"></a>
 		<img id="Titre"src="img/Titre.png" alt="Logo du site">
 		<div id="connexion">
-			<a href="index.php?module=connexion">Connexion</a>
-			<a href="" >Inscription</a>		
+			<a href="modele_choixConnexion.php" >Connexion/
+			Inscription</a>	
 		</div>
 		<header>
 		<nav id="Barre">
@@ -32,13 +32,7 @@
 		</header>
 		<section>
 			<article>
-			<h1>Actualité</h1>
-			<div>
-			<h3>Deuxième Annonce</h3>
-			<p>Ce site est toujours en cours de dévellopement,et le sera encore longtemps </p>
-			</div>
-			<div>
-			<h3>Première Annonce</h3>
+			<h1>Annonce</h1>
 			<p>Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement </p>
 			</div>
 			</article>
@@ -54,4 +48,3 @@
 		</footer>
 	</body>
 </html>
-
