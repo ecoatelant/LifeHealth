@@ -6,13 +6,13 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>LifeHealth</title>
-		<link href="../img/styleModele_connexion.css" rel="stylesheet" type="text/css">
+		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<div id="divTitre" >
-			<img id="TitreImg"src="../img/Titre.png" alt="Logo du site">
-			<a id="TitreA1" href="index.php?module=connexion" >Connexion   </a>	
-			<a id="TitreA2" href="index.php?module=connexion" >Inscription </a>		
+			<img src="img/Titre.png" alt="Logo du site">
+			<a href="index.php?module=connexion" >Connexion/
+			Inscription</a>		
 		</div>
 		<header>
 		<nav id="Barre">
@@ -37,9 +37,9 @@
 		
 		
 		<footer>
-		<img id="imgfoot1" src="../img/logo.png" alt="Logo du site">
+		<img id="imgfoot1" src="img/logo.png" alt="Logo du site">
 		<p>Life Health, tous droits révervés</p>		
-		<img id="imgfoot2" src="../img/logo.png" alt="Logo du site">
+		<img id="imgfoot2" src="img/logo.png" alt="Logo du site">
 		</footer>
 		
 	</body>

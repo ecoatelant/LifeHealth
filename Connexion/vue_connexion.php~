@@ -55,7 +55,11 @@ class VueConnexion {
 			
 			
 		</section>
-		
+		<footer>
+		<a id="imgfoot1"href="model_client.html"><img src="../img/logo.png" alt="Logo du site"></a>
+		<p>Life Health, tous droits révervés</p>		
+		<a id="imgfoot2"href="model_client.html"><img src="../img/logo.png" alt="Logo du site"></a>
+		</footer>
 		
 	</body>
 				</html>';
@@ -100,7 +104,11 @@ class VueConnexion {
 			
 			
 		</section>
-		
+		<footer>
+		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
+		<p>Life Health, tous droits révervés</p>		
+		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
+		</footer>
 		
 	</body>
 			</html>';

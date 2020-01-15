@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="fr">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -14,8 +14,8 @@
 	<body>
 		<div id="divTitre" >
 			<img id="TitreImg"src="img/Titre.png" alt="Logo du site">
-			<a id="TitreA1" href="index.php?module=connexion&action=choixConnexion" >Connexion   </a>	
-			<a id="TitreA2" href="index.php?module=connexion=choixConnexion" >Inscription </a>		
+			<a id="TitreA1" href="index.php?module=connexion&action=choix_Connexion" >Connexion   </a>	
+			<a id="TitreA2" href="index.php?module=connexion=choix_Connexion" >Inscription </a>		
 		</div>
 		<header>
 		<nav id="Barre">

@@ -11,8 +11,8 @@
 	<body>
 		<div id="divTitre" >
 			<img id="TitreImg"src="../img/Titre.png" alt="Logo du site">
-			<a id="TitreA1" href="index.php?module=connexion" >Connexion   :</a>	
-			<a id="TitreA2" href="index.php?module=connexion" >Inscription :</a>		
+			<a id="TitreA1" href="index.php?module=connexion" >Connexion   </a>	
+			<a id="TitreA2" href="index.php?module=connexion" >Inscription </a>		
 		</div>
 		<header>
 		<nav id="Barre">

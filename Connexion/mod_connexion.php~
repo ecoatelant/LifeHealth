@@ -5,8 +5,8 @@ require 'cont_connexion.php';
 class ModConnexion {
     
     public function __construct () {
-        $contCo = new ContConnexion();
-        $vueCo = new VueConnexion();
+        $cont = new ContConnexion();
+        $vueC = new VueConnexion();
 
         if (isset($_GET['module'])){
 
@@ -19,27 +19,28 @@ class ModConnexion {
 
                     case 'validerinscription':
                         
-                        $contCo::valider_inscription();
+                        $cont::valider_inscription();
                     break;
                     case 'choix_Connexion':
-                        $vueCo::choix_Connexion();
+                        $vueC::choix_Connexion();
                         break;
                     case 'patient':
-                        $vueCo::form_connexionPatient();
+                        $vueC::form_connexionPatient();
                         break;
                     case 'docteur':
-                        $vueCo::form_connexionDocteur();
+                        $vueC::form_connexionDocteur();
                         break;
                       
                     case 'seconnecter':
-                        $contCo::se_connecter();
+                        $cont::se_connecter();
                         break;
                    case 'DECONNEXION':
-                        $contCo::se_deconnecter();
+                        $cont::se_deconnecter();
                         break;
                     default:
                         echo 'plus de switch action inconnu';
                         break;
+                    //endswitch;
                     }
                     
             }

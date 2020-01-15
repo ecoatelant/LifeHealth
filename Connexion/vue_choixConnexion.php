@@ -9,21 +9,7 @@
 		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<div id="divTitre" >
-			<img src="img/Titre.png" alt="Logo du site">
-			<a href="index.php?module=connexion" >Connexion/
-			Inscription</a>		
-		</div>
-		<header>
-		<nav id="Barre">
-		<a href="index.php">Acceuil</a><!-- Les liens avec des # vise des pages pas encore crée -->
-		<a href="#">Historique des soins</a>
-		<a href="#">Antécédents médicaux</a>
-		<a href="#">Résultat examens</a>
-		<a href="#">Compte rendu</a>
-		<a href="#">Coordonnées</a>
-		</nav>
-		</header>
+
 		<section>
 		
 		

@@ -1,0 +1,38 @@
+/*Début Body*/
+body{
+width: 98%;
+}
+body a{
+text-decoration: none;
+}
+/*Fin Body
+Début article*/
+form {
+display: inline-block;
+}
+
+/*Fin Article
+Début Aside*/
+
+
+/*Fin Aside
+Début Footer*/
+
+footer{
+background-color: #4fa0f7;
+margin-top: 30px;
+}
+footer img{
+display: inline-block;
+margin-top: 20px;
+margin-left: 30px;
+}
+footer p{
+display: inline-block;
+
+margin-right: 140px;
+padding-left:140px;
+position: relative;
+top: -15px;
+}
+/*Fin Footer*/

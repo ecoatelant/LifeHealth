@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="fr">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -14,8 +14,8 @@
 	<body>
 		<div id="divTitre" >
 			<img id="TitreImg"src="img/Titre.png" alt="Logo du site">
-			<a id="TitreA1" href="index.php?module=connexion" >Connexion   </a>	
-			<a id="TitreA2" href="index.php?module=connexion" >Inscription </a>		
+			<a id="TitreA1" href="index.php?module=connexion&action=choix_Connexion" >Connexion   </a>	
+			<a id="TitreA2" href="index.php?module=connexion=choix_Connexion" >Inscription </a>		
 		</div>
 		<header>
 		<nav id="Barre">
@@ -27,21 +27,6 @@
 		<a href="#">Coordonnées</a>
 		</nav>
 		</header>
-<!--		<section>
-			<article>
-			<h1>Annonce</h1>
-			<p>Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement </p>
-			</div>
-			</article>
-			<aside>
-			<h2>Life health</h2>
-			<p>Ce site est un site de carnet de santé en ligne </p>
-			</aside>
-		</section>
-		<footer>
-		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
-		<p>Life Health, tous droits révervés</p>		
-		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
-		</footer>-->
+
 	</body>
 </html>

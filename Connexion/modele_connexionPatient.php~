@@ -8,24 +8,7 @@
 		<title>LifeHealth</title>
 		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
-		
-		<a id="logo"href="model_c"><img src="img/logo.png" alt="Logo du site"></a>
-		<img id="Titre"src="img/Titre.png" alt="Logo du site">
-		<div id="connexion">
-			<a href="index.php?module=connexion" >Connexion/
-			Inscription</a>		
-		</div>
-		<header>
-		<nav id="Barre">
-		<a href="index.php">Acceuil</a><!-- Les liens avec des # vise des pages pas encore crée -->
-		<a href="#">Historique des soins</a>
-		<a href="#">Antécédents médicaux</a>
-		<a href="#">Résultat examens</a>
-		<a href="#">Compte rendu</a>
-		<a href="#">Coordonnées</a>
-		</nav>
-		</header>
+
 		<section>
 		
 			<article>
