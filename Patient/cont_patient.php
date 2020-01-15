@@ -16,6 +16,10 @@ class ContPatient {
         VuePatient::afficherSoins(ModelePatient::recupererSoins());
     }
 
+    function coordonnees(){
+        $this->vuePat->afficherCoordonnees($this->modPat->recupererCompteCourant($_SESSION['idPatient'])->fetch()););
+        }
+
 }
 
 

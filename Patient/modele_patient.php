@@ -6,6 +6,11 @@ class ModelePatient extends ModGenerique {
 
     public function __construct () {}
 
+    public function recupererCompteCourant($idP){
+        $req = self::$bdd ->query('SELECT * FROM utilPatient where idPatient = '.$idP.'');
+        return $req;
+    }
+
     function recupererSoins(){
     	$requete=ModeleConnexion::$bdd->query('SELECT * FROM vaccin');
     	return $requete;
