@@ -5,14 +5,14 @@ if(!isset($_SESSION['login']) && !defined('CONSTANT')){
     define('CONSTANT',NULL);
 }
 
+    require('vue_header.php');
+
 
 require_once('Connexion/mod_connexion.php');
 require_once('Docteur/mod_docteur.php');
 require_once('Patient/mod_patient.php');
 
 ModeleConnexion::initConnexion();
-    require('vue_header.php');
-
 if (isset($_GET['module'])) {
         $module=htmlspecialchars($_GET['module']);
         switch ($module) {
