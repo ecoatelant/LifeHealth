@@ -1,12 +1,13 @@
 
 <?php
+
 require 'cont_connexion.php';
 
 class ModConnexion {
     
     public function __construct () {
-        $cont = new ContConnexion();
-        $vueC = new VueConnexion();
+        $contCo = new ContConnexion();
+        $vueCo = new VueConnexion();
 
         if (isset($_GET['module'])){
 
@@ -15,32 +16,29 @@ class ModConnexion {
              if (isset($_GET['action'])) {
 
                 switch ($_GET['action']) {
-                	
-
+                    //Vérifier si l'on le garde
                     case 'validerinscription':
-                        
-                        $cont::valider_inscription();
+                        $contCo::validation_Inscription();
                     break;
                     case 'choix_Connexion':
-                        $vueC::choix_Connexion();
+                        $vueCo::choix_Connexion();
                         break;
                     case 'patient':
-                        $vueC::form_connexionPatient();
+                        $vueCo::form_connexionPatient();
                         break;
                     case 'docteur':
-                        $vueC::form_connexionDocteur();
+                        $vueCo::form_connexionDocteur();
                         break;
                       
-                    case 'seconnecter':
-                        $cont::se_connecter();
+                    case 'seConnecter':
+                        ContConnexion::seConnecter();
                         break;
                    case 'DECONNEXION':
-                        $cont::se_deconnecter();
+                        $contCo::se_deconnecter();
                         break;
                     default:
                         echo 'plus de switch action inconnu';
                         break;
-                    //endswitch;
                     }
                     
             }

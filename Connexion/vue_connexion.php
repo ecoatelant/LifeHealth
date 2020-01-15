@@ -28,24 +28,25 @@ class VueConnexion {
 			</form>
 			</div>
 				<h2>Inscription patient</h2>			
-			<form id="myForm" method="post" action="" >
-				<br>Pr&eacute;nom *<br><input name="text1" id="text1" type="text" required >
-				<br>Nom *<br><input name="text2" id="text2" type="text" required >
-				<br>Mot de passe *<br><input name="password3" id="password3" type="password" required >
+			<form method="post" action="index.php?module=connexion&action=validerinscription" >
+				<br>Pr&eacute;nom *<br><input name="prenom" id="prenom" type="text" required >
+				<br>Nom *<br><input name="nom" id="nom" type="text" required >
+				<br>Mot de passe *<br><input name="mdp" id="mdp" type="password" required >
+				<br>Mot de passe Confirmé *<br><input name="mdpC" id="mdpC" type="password" required >
 				<br>Genre *
-				<br><select name="select4" id="select4" required >
+				<br><select name="genre" id="genre" required >
 					<option value="Homme" selected="selected">Homme</option>
 					<option value="Femme" >Femme</option>
 					<option value="Autre" >Autre</option>
 					</select>
-				<br>Num&eacute;ro de Carte Vitale *<br><input name="number5" id="number5" type="number" required >
-				<br>Email<br><input name="email6" id="email6" type="email" >
-				<br>Adresse<br><input name="text7" id="text7" type="text" >
-				<br>Code Postal<br><input name="number8" id="number8" type="number" >
-				<br>Date de naissance<br><input name="date9" id="date9" type="text" >
-				<br>Lieu Naissance<br><input name="text10" id="text10" type="text" >
-				<br>Code Postal de naissance<br><input name="number11" id="number11" type="number" >
-				<br><input name="submit12" type="submit" value="Valider" >
+				<br>Num&eacute;ro de Carte Vitale *<br><input name="nbCV" id="nbCV" type="number" required >
+				<br>Email<br><input name="email" id="email" type="email" required >
+				<br>Adresse<br><input name="adresse" id="adresse" type="text" >
+				<br>Code Postal<br><input name="nbCP" id="nbCP" type="number" >
+				<br>Date de naissance<br><input name="date" id="date" type="text" >
+				<br>Lieu Naissance<br><input name="lieuNais" id="lieuNais" type="text" >
+				<br>Code Postal de naissance<br><input name="nbCPNais" id="nbCPNais" type="number" >
+				<br><input name="inscriptionPatient" type="submit" value="Inscription" >
 			</form>
 			</div>
 			
