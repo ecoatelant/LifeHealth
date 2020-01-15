@@ -18,7 +18,7 @@ class ModConnexion {
                 switch ($_GET['action']) {
                     //Vérifier si l'on le garde
                     case 'validerinscription':
-                        $contCo::valider_inscription();
+                        $contCo::validationInscription();
                     break;
                     case 'choix_Connexion':
                         $vueCo::choix_Connexion();
