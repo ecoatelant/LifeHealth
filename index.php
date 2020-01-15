@@ -5,6 +5,8 @@ if(!isset($_SESSION['login']) && !defined('CONSTANT')){
     define('CONSTANT',NULL);
 }
 
+require('vue_head.php');
+
 require_once('Connexion/mod_connexion.php');
 require_once('Docteur/mod_docteur.php');
 require_once('Patient/mod_patient.php');
@@ -23,17 +25,13 @@ if (isset($_GET['module'])) {
                
             break;
             case 'patient':
-                if(!empty($_SESSION['login'])){
-                    echo "Vous devez vous connecter pour accéder aux différentes particules du site."; //à mettre dans une vue
-                }else{
-                    $moduleAdm = new ModPatient();
-                }
+                //TO-DO : Vérifier si l'on est bien connecté
+                $modulePatient = new ModPatient();
             break;
         }
         
     }
 require('vue_footer.php');
-
 
     if(!empty($_SESSION['login'])){}
 		
