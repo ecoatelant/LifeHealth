@@ -5,7 +5,6 @@ if(!isset($_SESSION['login']) && !defined('CONSTANT')){
     define('CONSTANT',NULL);
 }
 
-require('vue_head.php');
 
 require_once('Connexion/mod_connexion.php');
 require_once('Docteur/mod_docteur.php');

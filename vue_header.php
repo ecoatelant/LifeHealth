@@ -15,16 +15,16 @@
 		<div id="divTitre" >
 			<img id="TitreImg"src="img/Titre.png" alt="Logo du site">
 			<a id="TitreA1" href="index.php?module=connexion&action=choix_Connexion" >Connexion   </a>	
-			<a id="TitreA2" href="index.php?module=connexion=choix_Connexion" >Inscription </a>		
+			<a id="TitreA2" href="index.php?module=connexion&action=choix_Connexion" >Inscription </a>		
 		</div>
 		<header>
 		<nav id="Barre">
-		<a href="index.php">Acceuil</a><!-- Les liens avec des # vise des pages pas encore crée -->
-		<a href="#">Historique des soins</a>
-		<a href="#">Antécédents médicaux</a>
-		<a href="#">Résultat examens</a>
-		<a href="#">Compte rendu</a>
-		<a href="#">Coordonnées</a>
+		<a href="index.php">Accueil</a><!-- Les liens avec des # vise des pages pas encore crée -->
+				<a href="index.php?module=patient&action=soins">Historique des soins</a>
+				<a href="index.php?module=patient&action=maladie">Maladie</a>
+				<a href="index.php?module=patient&action=examens">Examens</a>
+				<a href="index.php?module=patient&action=compteRendu">Compte rendu</a>
+				<a href="index.php?module=patient&action=coordonnes">Coordonnées</a>
 		</nav>
 		</header>
 

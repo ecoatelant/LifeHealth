@@ -33,10 +33,6 @@ if (isset($_GET['module'])) {
     }
 require('vue_footer.php');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 34f429332a1bfbb1a00119812e83a5035e6f2a8a
     if(!empty($_SESSION['login'])){}
 		
 ?>
