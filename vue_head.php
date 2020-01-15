@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>LifeHealh</title>
-		<link href="img/styleModele_client.css" rel="stylesheet" type="text/css">
+		<link href="img/styleVue_client.css" rel="stylesheet" type="text/css">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -11,14 +11,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</head>
-	
 	<body>
-		
-		<a id="logo"href="model_c"><img src="img/logo.png" alt="Logo du site"></a>
-		<img id="Titre"src="img/Titre.png" alt="Logo du site">
-		<div id="connexion">
-			<a href="index?module=connexion">Connexion</a>
-			<a href="index?module=connexion">Inscription</a>
+		<div id="divTitre" >
+			<img id="TitreImg"src="img/Titre.png" alt="Logo du site">
+			<a id="TitreA1" href="index.php?module=connexion" >Connexion   </a>	
+			<a id="TitreA2" href="index.php?module=connexion" >Inscription </a>		
 		</div>
 		<header>
 			<nav id="Barre">
