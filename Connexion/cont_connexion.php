@@ -18,54 +18,32 @@ class ContConnexion {
         $this->vueCo->form_inscription();
     }
 
-    public function verifierJeton(){
-        if (self::verifyFormToken('formCo')) {
-
-            // ... more security testing
-            // on pourrai rajouter plus de condition pour améliorer et tester la securité
-            // if pass, send email
-          
-          } else {
-            
-            echo "Tentative de detecé Hack !.";
-            die ('ERREUR vous n\'êtes pas autoriser à poursuivre sur cette page') ;
-          
-          }
-    }
-    public function se_connecter(){
-        self::verifierJeton();
-        if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion') {
-	        if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['mdp']) && !empty($_POST['mdp']))) {
-                //if(self::connexion_admin()==true)
-                $data=$this->modCo->connexion($_POST["login"]);
-                if(verificationMDP($_POST['mdp'],$data['motPass'])){
-                    $_SESSION['monid']=$data['idmembre'];
-                    $_SESSION['login'] = $_POST['login'];
+    public function seConnecter(){
+        //Vérification si les champs sont non-vides.
+        if (isset($_POST['connexionPatient']) && $_POST['connexionPatient'] == 'Connexion') {
+	        if ((isset($_POST['id']) && !empty($_POST['id'])) && (isset($_POST['mdp']) && !empty($_POST['mdp']))) {
+                //Récupération des identifiants compatibles avec les données passées. Si $data n'est pas vide, cela veut dire que l'utilisateur est un membre.
+                $data=ModeleConnexion::connexionPatient($_POST['id']);
+                if($_POST['mdp']==$data['mdp']){
+                    $_SESSION['idPatient']=$data['idPatient'];
                     $_GET['module']=null;
                     $_GET['action']=null;
-                   require('index.php'); 
-                   exit();
+                    echo  
+                    exit();
                 }
-                elseif ($data == 0) {
-                    if($_POST['login']=='admin' and $_POST['mp']=='admin'){
-                        $_SESSION['login']='admin';
-                        $_GET['module']='admin';
-                        require('index.php'); 
-                        exit();
-                    }
-                    else
-                        $erreur = 'Compte non reconnu.';
-                }
-                else {
-                    $erreur = 'Probème dans la base de données : plusieurs membres ont les mêmes identifiants de connexion.';
+                //Si on ne trouve aucune réponse, le visiteur s'est trompé soit dans son identifiant ou dans son mot de passe.
+                else if($data == 0){
+                    $erreur = 'Le compte nest pas reconnu.';
                 }
             }
             else {
                 $erreur = 'Au moins un des champs est vide.';
             }
-            }
-            if (isset($erreur)) echo '<br />',$erreur;
         }
+        if (isset($erreur)){
+            echo '<br />',$erreur;
+        }
+    }
     
 
     public function validationInscription(){

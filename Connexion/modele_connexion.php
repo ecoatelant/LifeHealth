@@ -18,19 +18,8 @@ class ModeleConnexion {
 
     function connexionPatient($idPat){
         try{
-            $req = self::$bdd->query('SELECT idPat,mdp FROM utilPat where idPat="'.$idPat.'"');
-            return $donnees = $req->fetch();  
-        }
-        catch(Exception $e){
-            die('Erreur : '.$e->getMessage());
-            echo "Veuillez contacter l'administrateur de LifeHealth.";
-        }
-    }
-
-    function connexionDocteur($idDocteur){
-        try{
-            $req = self::$bdd->query('SELECT idDocteur,mdp FROM utilDocteur where idDocteur="'.$idDocteur.'"');
-            return $donnees = $req->fetch();  
+            $req = self::$bdd->query('SELECT idPatient,mdp FROM utilPatient where idPatient="'.$idPat.'"');
+            return $donnee = $req->fetch();  
         }
         catch(Exception $e){
             die('Erreur : '.$e->getMessage());
@@ -39,7 +28,7 @@ class ModeleConnexion {
     }
 
     public function inscriptionPatient($idPatient){
-        $mp = password_hash($_POST['mp'],PASSWORD_DEFAULT);
+        $mdp = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
         try{
             $sth=self::$bdd->prepare('INSERT INTO utilPatient (idPatient,mdp) VALUES("'.$idPatient.'", "'.$mp.'")');
             $sth->execute(array( $idPatient,$mp));

@@ -1,5 +1,6 @@
 
 <?php
+
 require 'cont_connexion.php';
 
 class ModConnexion {
@@ -15,10 +16,8 @@ class ModConnexion {
              if (isset($_GET['action'])) {
 
                 switch ($_GET['action']) {
-                	
-
+                    //Vérifier si l'on le garde
                     case 'validerinscription':
-                        
                         $contCo::valider_inscription();
                     break;
                     case 'choix_Connexion':
@@ -31,8 +30,8 @@ class ModConnexion {
                         $vueCo::form_connexionDocteur();
                         break;
                       
-                    case 'seconnecter':
-                        $contCo::se_connecter();
+                    case 'seConnecter':
+                        ContConnexion::seConnecter();
                         break;
                    case 'DECONNEXION':
                         $contCo::se_deconnecter();

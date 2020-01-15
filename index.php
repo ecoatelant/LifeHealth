@@ -1,8 +1,15 @@
 <?php
 
-if(!isset($_SESSION['login']) && !defined('CONSTANT')){
+if(!isset($_SESSION['idPatient']) && !defined('CONSTANT')){
     session_start();
+    $_SESSION['idPatient'];
     define('CONSTANT',NULL);
+}
+
+if(empty($_SESSION['idPatient'])) {
+    echo "Vous n'etes pas connecté.";
+}else{
+    echo "Vous etes connecté.";
 }
 
 require('vue_header.php');
@@ -24,8 +31,11 @@ if (isset($_GET['module'])) {
                
             break;
             case 'patient':
-                //TO-DO : Vérifier si l'on est bien connecté
-                $modulePatient = new ModPatient();
+                if (!isset($_SESSION['idPatient'])) {
+                    echo "Pour accéder à cette fonctionnalité du site, veuillez vous connecter.";
+                } else {
+                    $modulePatient = new ModPatient();
+                }
             break;
         }
         

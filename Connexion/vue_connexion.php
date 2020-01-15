@@ -21,10 +21,10 @@ class VueConnexion {
 			<h1>Patient</h1>
 			<div>
 			<h2>Connexion patient</h2>			
-			<form id="connectDoc" method="post" action="" >
-					<br>Identifiant<br><input name="text1" id="text1" type="text" >
-					<br>Mot de passe<br><input name="password2" id="password2" type="password" >
-					<br><input name="submit3" type="submit" value="Valider" >
+			<form method="post" action="index.php?module=connexion&action=seConnecter" value="Connexion">
+					<br>Identifiant<br><input name="id" type="text required" >
+					<br>Mot de passe<br><input name="mdp" type="password" required>
+					<br><input name="connexionPatient" type="submit" value="Connexion" >
 			</form>
 			</div>
 				<h2>Inscription patient</h2>			
