@@ -1,20 +1,39 @@
 <?php
 
-class VueMembre {
+class VuePatient {
 
-    public function __construct () {
-        parent::__construct();
+    public function __construct () {}
+
+    public function afficherCorpsSoins(){
+        //TO-DO
+        echo "";
+    }
+
+    public function afficherSoins($soins){
+        $req=null;
+        if(!empty($soins)){
+            foreach ($soins as $donnees) {
+            echo $donnees['nom'];
+            echo "<br/>";
+            echo $donnees['ageDebut'];
+            echo "<br/>";
+            echo $donnees['ageEcheance'];
+            echo "<br/>";
+            echo $donnees['nbRappel'];
+            echo "<br/>";
+            echo $donnees['numRappel'];
+            echo "<br/>";
+            echo $donnees['obligatoire'];
+            echo "<br/>";
+            //$req = $req.'<option value="'.$donnees['idType'].'">'.$donnees['nomType'].'</option>';
+            }
+        }
     }
        
-    public function coordonnees(){
-        echo '<a href="index.php?module=patient&action=coordonnees">
-        Coordonnées </a>
-        <a href="index.php?module=membre&action=form_infoCompte">
-        Modifier les informations du Compte </a>
-         <a href="index.php?module=membre&action=supp_compte">
-         Supprimer mon compte </a>
+    /*public function afficherCoordonnees(){
+        echo '
          ';
-    }
+    }*/
 
 }
 

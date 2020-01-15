@@ -24,8 +24,8 @@
 			<nav id="Barre">
 				<a href="index.php">Accueil</a><!-- Les liens avec des # vise des pages pas encore crée -->
 				<a href="index.php?module=patient&action=soins">Historique des soins</a>
-				<a href="index.php?module=patient&action=antecedentsMedic">Antécédents médicaux</a>
-				<a href="index.php?module=patient&action=resultats">Résultat examens</a>
+				<a href="index.php?module=patient&action=maladie">Maladie</a>
+				<a href="index.php?module=patient&action=examens">Examens</a>
 				<a href="index.php?module=patient&action=compteRendu">Compte rendu</a>
 				<a href="index.php?module=patient&action=coordonnes">Coordonnées</a>
 			</nav>
