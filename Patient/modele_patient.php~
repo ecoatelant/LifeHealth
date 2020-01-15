@@ -12,7 +12,7 @@ class ModelePatient extends ModGenerique {
     }
 
     function recupererSoins($idPCourant){
-    	$requete=ModeleConnexion::$bdd->query('SELECT * FROM vaccin NATURAL JOIN aFaire WHERE idPatient = '.$idPCourant.' AND fait = true');
+    	$requete=ModeleConnexion::$bdd->query('SELECT * FROM vaccin WHERE idPatient = '.$idPCourant);
     	return $requete;
     	$requete->closeCursor();
     }

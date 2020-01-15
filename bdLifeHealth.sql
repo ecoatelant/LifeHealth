@@ -1,5 +1,22 @@
+DROP TABLE utilPatient;
+DROP TABLE utilDoc;
+DROP TABLE pointCourbeCroissance;
+DROP TABLE courbePoids;
+DROP TABLE vaccin;
+DROP TABLE examen;
+DROP TABLE maladie;
+DROP TABLE docMedical;
+DROP TABLE Diagnostic;
 
-CREATE OR DROP TABLE utilPatient(
+DROP TABLE aFaire;
+DROP TABLE soigner;
+DROP TABLE faireExamen;
+DROP TABLE faireDiagnostic;
+
+DROP TABLE avoir;
+DROP TABLE concerne;
+
+CREATE TABLE utilPatient(
 	idPatient       SERIAL NOT NULL ,
 	mdp             VARCHAR (32) NOT NULL ,
 	nom             VARCHAR (58) NOT NULL ,
@@ -10,13 +27,9 @@ CREATE OR DROP TABLE utilPatient(
 	email           VARCHAR (346)  ,
 	num             CHAR (10)   ,
 	numCarteVitale  CHAR (13)   ,
-	lieuNaiss       VARCHAR (190) NOT NULL ,
+	lieuNaiss       VARCHAR (190) ,
 	genre           VARCHAR (12)  ,
 	codePostalNaiss CHAR (5)   ,
-	taille          FLOAT  NOT NULL ,
-	dateTaille      DATE  NOT NULL ,
-	poids           FLOAT  NOT NULL ,
-	datePoids       DATE  NOT NULL ,
 	CONSTRAINT prk_constraint_utilPatient PRIMARY KEY (idPatient)
 );
 
@@ -147,12 +160,6 @@ CREATE TABLE concerne(
 	CONSTRAINT prk_constraint_concerne PRIMARY KEY (idVaccin,idMaladie)
 );
 
-
-
-ALTER TABLE utilPatient ADD CONSTRAINT FK_utilPatient_taille FOREIGN KEY (taille) REFERENCES pointCourbeCroissance(taille);
-ALTER TABLE utilPatient ADD CONSTRAINT FK_utilPatient_dateTaille FOREIGN KEY (dateTaille) REFERENCES pointCourbeCroissance(dateTaille);
-ALTER TABLE utilPatient ADD CONSTRAINT FK_utilPatient_poids FOREIGN KEY (poids) REFERENCES courbePoids(poids);
-ALTER TABLE utilPatient ADD CONSTRAINT FK_utilPatient_datePoids FOREIGN KEY (datePoids) REFERENCES courbePoids(datePoids);
 ALTER TABLE aFaire ADD CONSTRAINT FK_aFaire_idPatient FOREIGN KEY (idPatient) REFERENCES utilPatient(idPatient);
 ALTER TABLE aFaire ADD CONSTRAINT FK_aFaire_idVaccin FOREIGN KEY (idVaccin) REFERENCES vaccin(idVaccin);
 ALTER TABLE soigner ADD CONSTRAINT FK_soigner_idPatient FOREIGN KEY (idPatient) REFERENCES utilPatient(idPatient);
@@ -171,3 +178,9 @@ ALTER TABLE avoir ADD CONSTRAINT FK_avoir_idMaladie FOREIGN KEY (idMaladie) REFE
 ALTER TABLE avoir ADD CONSTRAINT FK_avoir_idPatient FOREIGN KEY (idPatient) REFERENCES utilPatient(idPatient);
 ALTER TABLE concerne ADD CONSTRAINT FK_concerne_idVaccin FOREIGN KEY (idVaccin) REFERENCES vaccin(idVaccin);
 ALTER TABLE concerne ADD CONSTRAINT FK_concerne_idMaladie FOREIGN KEY (idMaladie) REFERENCES maladie(idMaladie);
+
+--INSERT INTO utilPatient VALUES (1,'admin','t','t','2020-01-01');
+INSERT INTO vaccin VALUES (1,2,1,6,6,false,'Test');
+INSERT INTO aFaire VALUES('2005-02-10',true,1,1);
+
+
