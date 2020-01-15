@@ -17,8 +17,8 @@
 		<a id="logo"href="model_c"><img src="img/logo.png" alt="Logo du site"></a>
 		<img id="Titre"src="img/Titre.png" alt="Logo du site">
 		<div id="connexion">
-			<a href="modele_choixConnexion.php" >Connexion/
-			Inscription</a>	
+			<a href="index?module=connexion">Connexion</a>
+			<a href="index?module=connexion">Connexion</a>
 		</div>
 		<header>
 		<nav id="Barre">
@@ -30,7 +30,7 @@
 		<a href="#">Coordonnées</a>
 		</nav>
 		</header>
-		<section>
+<!--		<section>
 			<article>
 			<h1>Annonce</h1>
 			<p>Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement Ce site est en cours de dévellopement </p>
@@ -45,6 +45,6 @@
 		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
 		<p>Life Health, tous droits révervés</p>		
 		<a id="logo"href="model_client.html"><img src="img/logo.png" alt="Logo du site"></a>
-		</footer>
+		</footer>-->
 	</body>
 </html>

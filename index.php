@@ -32,9 +32,10 @@ if (isset($_GET['module'])) {
 
     $content = VueGlobale::afficher();
 
+    require('vue_client.php');
+
     if(!empty($_SESSION['login'])){}else if(empty($module)){
-        //require('header.php');
-        require('modele_client.php');
+        echo "Vous devez vous connecter pour accéder aux différentes particules du site."; //à mettre dans une vue
     }
 
 ?>
