@@ -1,8 +1,6 @@
 <?php
 
-require_once 'modele_globale.php';
-
-class ModelePatient extends ModeleGlobale{
+class ModelePatient {
 
     public function __construct () {}
 

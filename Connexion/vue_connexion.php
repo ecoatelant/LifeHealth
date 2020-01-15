@@ -1,7 +1,6 @@
 <?php
-require_once 'vue_globale.php';
 
-class VueConnexion extends VueGlobale{
+class VueConnexion {
     public function __construct () {
         parent::__construct();
     }

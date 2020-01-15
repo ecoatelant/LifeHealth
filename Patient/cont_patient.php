@@ -1,9 +1,8 @@
 <?php
 require_once 'vue_patient.php';
 require_once 'modele_patient.php';
-require_once 'cont_globale.php';
 
-class ContPatient extends ContGlobale{
+class ContPatient {
     private $modPat;
     private $vuePat;
 

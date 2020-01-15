@@ -1,8 +1,6 @@
 <?php
 
-require_once 'vue_globale.php';
-
-class VueMembre extends VueGlobale{
+class VueMembre {
 
     public function __construct () {
         parent::__construct();

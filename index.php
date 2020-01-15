@@ -22,20 +22,18 @@ if (isset($_GET['module'])) {
                
             break;
             case 'patient':
-                $moduleAdm = new ModPatient();
+                if(!empty($_SESSION['login'])){
+                    echo "Vous devez vous connecter pour accéder aux différentes particules du site."; //à mettre dans une vue
+                }else{
+                    $moduleAdm = new ModPatient();
+                }
             break;
         }
         
     }
 
-    $module=htmlspecialchars($_GET['module']);
-
-    $content = VueGlobale::afficher();
-
     require('vue_client.php');
 
-    if(!empty($_SESSION['login'])){}else if(empty($module)){
-        echo "Vous devez vous connecter pour accéder aux différentes particules du site."; //à mettre dans une vue
-    }
+    if(!empty($_SESSION['login'])){}
 
 ?>

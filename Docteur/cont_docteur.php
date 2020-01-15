@@ -2,9 +2,8 @@
 
 require_once 'vue_docteur.php';
 require_once 'modele_docteur.php';
-require_once 'cont_globale.php';
 
-class ContDocteur extends ContGlobale{
+class ContDocteur {
     private $modDoc;
     private $vueDoc;
 

@@ -1,8 +1,6 @@
 <?php
 
-require_once 'vue_globale.php';
-
-class VueDocteur extends VueGlobale{
+class VueDocteur {
 
     public function __construct () {
         parent::__construct();

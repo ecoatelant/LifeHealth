@@ -1,8 +1,8 @@
 <?php
-require_once 'modele_connexion.php';
-require_once 'cont_globale.php';
 
-class ContConnexion extends ContGlobale{
+require_once 'modele_connexion.php';
+
+class ContConnexion {
     private $vueCo;
     private $modCo;
 
