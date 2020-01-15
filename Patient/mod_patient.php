@@ -17,7 +17,6 @@ class ModPatient {
                     case 'soins':
                          ContPatient::soins();
                         break;
-
                     case 'maladie':
                         # code...
                         break;
@@ -31,7 +30,7 @@ class ModPatient {
                         break;
 
                     case 'coordonnes':
-                        # code...
+                        ContPatient::coordonnees();
                         break;
 
                 }
