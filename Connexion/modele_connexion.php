@@ -30,8 +30,8 @@ class ModeleConnexion {
     public function inscriptionPatient($idPatient){
         $mdp = password_hash($_POST['mdp'],PASSWORD_DEFAULT);
         try{
-            $sth=self::$bdd->prepare('INSERT INTO utilPatient (idPatient,mdp) VALUES("'.$idPatient.'", "'.$mp.'")');
-            $sth->execute(array( $idPatient,$mp));
+            $sth=self::$bdd->prepare('INSERT INTO utilPatient (idPatient,mdp,nom,prenom,dateDeNaiss,adresse,codePostal,email,num,numCarteVital,LieuNaiss,genre,codePostalNaiss) VALUES("'.$idPatient.'", "'.$mdp.'","'.$nom.'","'.$prenom.'","'.$dateNaiss.'","'.$adresse.'","'.$CP.'","'.$email.'","'.$num.'","'.$nbCV.'","'.$lieuNaiss.'","'.$genre.'","'.$codePostalNaiss.'")');
+            $sth->execute(array( $idPatient,$mdp));
         }
         catch(Exception $e){
             die('problème à l\'insertion');

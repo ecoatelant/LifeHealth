@@ -13,18 +13,8 @@
 	</head>
 	<body>
 		<div id="divTitre" >
-			<img id="TitreImg"src="img/Titre.png" alt="Logo du site">	
+			<a id="TitreA1" href="index.php?module=connexion&action=DECONNEXION" >Deconnexion </a>	
+			<a id="TitreA2" href="index.php?" ><?php $idPatient ?></a>		
 		</div>
-		<header>
-		<nav id="Barre">
-			<a href="index.php">Accueil</a>
-			<a href="index.php?module=patient&action=soins">Historique des soins</a>
-			<a href="index.php?module=patient&action=maladie">Maladie</a>
-			<a href="index.php?module=patient&action=examens">Examens</a>
-			<a href="index.php?module=patient&action=compteRendu">Compte rendu</a>
-			<a href="index.php?module=patient&action=coordonnes">Coordonnées</a>
-		</nav>
-		</header>
-
 	</body>
 </html>

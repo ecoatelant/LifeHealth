@@ -13,26 +13,38 @@ display: inline-block;
 
 /*Fin Article
 Début Aside*/
+#Lien{
+position: absolute;
+top: 50%;
+left: 30%;
 
+padding: 2%;
+padding-left: 5%;
+padding-right: 17%;
+background-color: #4fa0f7;	
+border-radius: 10px;
 
+}
+#patient{
+
+position: relative;
+left: 0%;
+text-decoration: none;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 16px;
+font-weight: 700;
+color: white;
+}
+#docteur{
+position: relative;
+left: 60%;
+text-decoration: none;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 16px;
+font-weight: 700;
+color: white;
+
+}
+}
 /*Fin Aside
 Début Footer*/
-
-footer{
-background-color: #4fa0f7;
-margin-top: 30px;
-}
-footer img{
-display: inline-block;
-margin-top: 20px;
-margin-left: 30px;
-}
-footer p{
-display: inline-block;
-
-margin-right: 140px;
-padding-left:140px;
-position: relative;
-top: -15px;
-}
-/*Fin Footer*/

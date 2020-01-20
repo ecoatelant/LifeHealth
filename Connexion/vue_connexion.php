@@ -19,7 +19,7 @@ class VueConnexion {
 		
 			<article>
 			<h1>Patient</h1>
-			<div>
+			<div id="connexion">
 			<h2>Connexion patient</h2>			
 			<form method="post" action="index.php?module=connexion&action=seConnecter" value="Connexion">
 					<br>Identifiant<br><input name="id" type="text required" >
@@ -27,6 +27,7 @@ class VueConnexion {
 					<br><input name="connexionPatient" type="submit" value="Connexion" >
 			</form>
 			</div>
+			<div id="inscription">
 				<h2>Inscription patient</h2>			
 			<form method="post" action="index.php?module=connexion&action=validerinscription" >
 				<br>Pr&eacute;nom *<br><input name="prenom" id="prenom" type="text" required >
@@ -43,9 +44,9 @@ class VueConnexion {
 				<br>Email<br><input name="email" id="email" type="email" required >
 				<br>Adresse<br><input name="adresse" id="adresse" type="text" >
 				<br>Code Postal<br><input name="nbCP" id="nbCP" type="number" >
-				<br>Date de naissance<br><input name="date" id="date" type="text" >
-				<br>Lieu Naissance<br><input name="lieuNais" id="lieuNais" type="text" >
-				<br>Code Postal de naissance<br><input name="nbCPNais" id="nbCPNais" type="number" >
+				<br>Date de naissance<br><input name="dateNaiss" id="dateNaiss" type="text" >
+				<br>Lieu Naissance<br><input name="lieuNaiss" id="lieuNaiss" type="text" >
+				<br>Code Postal de naissance<br><input name="nbCPNaiss" id="nbCPNaiss" type="number" >
 				<br><input name="inscriptionPatient" type="submit" value="Inscription" >
 			</form>
 			</div>
@@ -112,16 +113,16 @@ class VueConnexion {
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<title>LifeHealth</title>
-		<link href="img/styleModele_connexion.css" rel="stylesheet" type="text/css">
+		<link href="img/styleVue_ChoixConnexion.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
 		<section>
-		
-		
 			<article>
-				<a href="index.php?module=connexion&action=patient">Vous êtes un patient</a>
-				<a href="index.php?module=connexion&action=docteur">Vous êtes un docteur</a>
+				<div id="Lien">
+				<a id="patient"href="index.php?module=connexion&action=patient">Vous êtes un patient</a>
+				<a id="docteur"href="index.php?module=connexion&action=docteur">Vous êtes un docteur</a>
+				</div>			
 			</article>
 			<aside>
 			</aside>

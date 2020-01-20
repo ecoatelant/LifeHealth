@@ -10,6 +10,18 @@ Début article*/
 form {
 display: inline-block;
 }
+#connexion{
 
+position: absolute;
+top: 50%;
+left: 30%;
+border: 3px solid black;
+}
+#inscription {
+position: absolute;
+top: 50%;
+left: 30%;
+border: 3px solid black;
+}
 /*Fin Article
 

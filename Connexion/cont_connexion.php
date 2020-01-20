@@ -49,23 +49,28 @@ class ContConnexion {
     public function validationInscription(){
         
         if (isset($_POST['inscriptionPatient']) && $_POST['inscriptionPatient'] == 'Inscription') {
-            if ((isset($_POST['Email']) && !empty($_POST['Email'])) && (isset($_POST['mdp']) && !empty($_POST['mdp'])) && (isset($_POST['mdpC']) && !empty($_POST['mdpC']))) {
+            if ((isset($_POST['idPatient']) && !empty($_POST['idPatient'])) && (isset($_POST['mdp']) && !empty($_POST['mdp'])) && (isset($_POST['mdpC']) && !empty($_POST['mdpC']))) {
             if ($_POST['mdp'] != $_POST['mdpC']) {
                 $erreur = 'Les deux mots de passe sont différents.';
             }
             else {
 
-                $data=$this->modCo->selection_membre($_POST["Email"]);
+                $data=$this->modCo->selection_membre($_POST["idPatient"]);
 
                 if ($data[0] == 0) {
-                    $this->modCo->inscriptionPatient($_POST["Email"]);
-                    $m_p=$this->modCo->connexionPatient($_POST["Email"]);
+                    $this->modCo->inscriptionPatient($_POST["idPatient"]);
+                    $m_p=$this->modCo->connexionPatient($_POST["idPatient"]);
                    
-                    $_SESSION['Email'] = $_POST['Email'];
+                    $_SESSION['idPatient'] = $_POST['idPatient'];
                     $_SESSION['monid']=$m_p['id'];
+                    
                     $_GET['module']=null;
                     $_GET['action']=null;
+                    
+      				  echo 'Votre numéro d inscription est'.$idPatient ;
+                   
                    require('index.php');
+                   
                 exit();
                 }
                 else {
@@ -85,7 +90,7 @@ class ContConnexion {
 
         $_GET['action']=null;
         $_GET['module']=null;
-        require('index.php'); 
+        require('index.php');
         exit();
     }
 }
