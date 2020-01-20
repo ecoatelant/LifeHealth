@@ -2,7 +2,7 @@
 
 if(!isset($_SESSION['idPatient']) && !defined('CONSTANT')){
     session_start();
-    $_SESSION['idPatient'];
+    @$_SESSION['idPatient'];
     define('CONSTANT',NULL);
 }
 

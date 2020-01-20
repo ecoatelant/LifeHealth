@@ -33,6 +33,13 @@ class ModPatient {
                         ContPatient::coordonnees();
                         break;
 
+                    case 'soinsFormulaire':
+                        ContPatient::soinsForm();
+                        break;
+
+                    case 'insertVaccins':
+                        ContPatient::formInsertVaccin();
+                        break;
                 }
             }
         }
