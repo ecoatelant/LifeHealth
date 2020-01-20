@@ -18,14 +18,14 @@ class ModelePatient extends ModGenerique {
 		return $req;
 	}
 
-    function recuperationMaladies(){
-        $selecPreparee=ModeleConnexion::$bdd->query('SELECT * FROM maladie WHERE idPatient = '.$_SESSION['idPatient']);
-        $req = $selecPreparee->fetchAll();
-        return $req;
-    }
-
     function recuperationExamens(){
        $requete=ModeleConnexion::$bdd->query('SELECT *,dateExamen FROM examen NATURAL JOIN avoir WHERE idPatient = '.$_SESSION['idPatient']);
+        return $requete;
+        $requete->closeCursor();
+    }
+
+    function recuperationMaladies(){
+       $requete=ModeleConnexion::$bdd->query('SELECT * FROM maladie NATURAL JOIN avoir WHERE idPatient = '.$_SESSION['idPatient']);
         return $requete;
         $requete->closeCursor();
     }
@@ -35,7 +35,7 @@ class ModelePatient extends ModGenerique {
         $selecPreparee->execute();
         //$selecPreparee2=ModeleConnexion::$bdd->query('INSERT INTO aFaire VALUES($dateVaccin,1,$_SESSION[\'idPatient\'],$selecPreparee)');
         //$selecPreparee2->execute();
-        var_dump($selecPreparee);
+        //var_dump($selecPreparee);
     }
     
 }

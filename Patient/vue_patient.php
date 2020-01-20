@@ -77,6 +77,72 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active, 
         echo "</center>";
     }
 
+    public function afficherMaladies($soins){
+        echo "<style type=\"text/css\">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#d4e3e5;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+.tftable tr:hover {background-color:#ffffff;}
+
+
+input[type=button], input[type=submit], input[type=reset], button, .button {
+    padding: 5px 15px;
+    margin: 3px 4px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    background: #75CCFF;
+    background: linear-gradient(top, #75CCFF 0%, #5cb3e6 100%);
+    background: -moz-linear-gradient(top, #75CCFF 0%, #5cb3e6 100%);
+    background: -webkit-linear-gradient(top, #75CCFF 0%, #5cb3e6 100%);
+    background: -o-linear-gradient(top, #75CCFF 0%, #5cb3e6 100%);
+    border: 1px solid #338bf6;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    -moz-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    -webkit-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    -o-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.50);
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover, .button:hover {
+    background: linear-gradient(top, #8fe6ff 0%, #75CCFF 100%);
+    background: -moz-linear-gradient(top, #8fe6ff 0%, #75CCFF 100%);
+    background: -webkit-linear-gradient(top, #8fe6ff 0%, #75CCFF 100%);
+    background: -o-linear-gradient(top, #8fe6ff 0%, #75CCFF 100%);
+}
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active, button:active, .button:active{
+    opacity:0.8;
+}
+</style>
+
+<center>
+
+<a href=\"index.php?module=patient&action=\"><input type=\"button\" value=\"Nouvelle maladie\"></a>
+
+
+<table class=\"tftable\" border=\"1\">
+<tr><th>Nom</th><th>Incurrable</th></tr>";
+
+        $req=null;
+        if(!empty($soins)){
+            foreach ($soins as $donnees) {
+                echo "<tr><td>";
+                echo $donnees['nom'];
+                echo "</td><td>";
+                echo $donnees['estIncurrable'];
+                echo "</td></tr>";
+            }
+            echo "</table>";
+        }
+        echo "</center>";
+    }
+
     public function afficherSoins($soins){
         echo "<style type=\"text/css\">
 .tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}

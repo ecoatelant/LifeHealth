@@ -18,7 +18,7 @@ class ModPatient {
                          ContPatient::soins();
                         break;
                     case 'maladie':
-                        # code...
+                        ContPatient::maladies();
                         break;
 
                     case 'examens':
