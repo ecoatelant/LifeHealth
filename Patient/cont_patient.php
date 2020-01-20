@@ -16,6 +16,10 @@ class ContPatient {
         VuePatient::afficherSoins(ModelePatient::recupererSoins());
     }
 
+    function examens() {
+        VuePatient::afficherExamens(ModelePatient::recuperationExamens());
+    }
+
     function coordonnees(){
         VuePatient::afficherCoordonnees(ModelePatient::recuperationCoordonnees());
         }

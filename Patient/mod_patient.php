@@ -22,11 +22,11 @@ class ModPatient {
                         break;
 
                     case 'examens':
-                        # code...
+                        ContPatient::examens();
                         break;
 
                     case 'compteRendu':
-                        # code...
+                        
                         break;
 
                     case 'coordonnes':

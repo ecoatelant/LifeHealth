@@ -18,6 +18,18 @@ class ModelePatient extends ModGenerique {
 		return $req;
 	}
 
+    function recuperationMaladies(){
+        $selecPreparee=ModeleConnexion::$bdd->query('SELECT * FROM maladie WHERE idPatient = '.$_SESSION['idPatient']);
+        $req = $selecPreparee->fetchAll();
+        return $req;
+    }
+
+    function recuperationExamens(){
+       $requete=ModeleConnexion::$bdd->query('SELECT *,dateExamen FROM examen NATURAL JOIN avoir WHERE idPatient = '.$_SESSION['idPatient']);
+        return $requete;
+        $requete->closeCursor();
+    }
+
     function ajoutSoins($nom,$numRappel,$nbRappel,$ageDeb,$ageFin,$obligatoire,$dateVaccin){
         $selecPreparee=ModeleConnexion::$bdd->prepare('INSERT into vaccin (DEFAULT,$nbRappel,$numRappel,$ageDeb,$ageFin,$obligatoire,$nom)');
         $selecPreparee->execute();
