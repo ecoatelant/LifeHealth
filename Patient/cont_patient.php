@@ -17,8 +17,16 @@ class ContPatient {
     }
 
     function coordonnees(){
-        VuePatient::afficherCoordonnees(ModelePatient::recupererCompteCourant($_SESSION['idPatient']));
+        VuePatient::afficherCoordonnees(ModelePatient::recuperationCoordonnees());
         }
+
+    function soinsForm(){
+        VuePatient::soinForm();
+    }
+
+    function formInsertVaccin(){
+        ModelePatient::ajoutSoins($_POST['nom'],$_POST['numRappel'],$_POST['nbRappel'],$_POST['ageDeb'],$_POST['ageFin'],$_POST['obligatoire'],$_POST['dateVaccin']);
+    }
 
 }
 
